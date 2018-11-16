@@ -1,17 +1,17 @@
 <idea-plugin>
   <id>br.com.viasoft</id>
   <name>CopyPlaceHolders</name>
-  <version>1.0</version>
+  <version>1.2</version>
   <vendor email="gaspar@viasoft.com.br" url="http://www.viasoft.com.br">VIASOFT</vendor>
 
   <description><![CDATA[
 Copy text by replacing variables with placeholders.
 
-Create a file named placeHolders.properties inside the resource folder.
+Create a file named placeHolders.properties inside the resource folder, if it does not exist a dialog box will be displayed for the user to inform variable value.
 
 When you select any text in the IntelliJ editor and use the 'Copy Place Holders' action, the selected text variables that have been added in the property file quoted above will be overwritten, and the replaced text will be copied.
 
-To add a variable use the following expression $ {VARIABLE_NAME}.
+To add a variable use the following expression ${VARIABLE_NAME}.
 
 Example:
 
@@ -19,7 +19,7 @@ In the placeHolders.properties file, add the following property.
 name = Gaspar
 
 In the IntelliJ editor add the following text
-My name is $ {name}
+My name is ${name}
 
 After adding the variable and text select the text and press the atacle Ctrl + Alt + C, or in the context of the menu select the option 'Copy Place Holders'.
 
@@ -45,7 +45,7 @@ After adding the variable and text select the text and press the atacle Ctrl + A
 
   <actions>
     <action class="br.com.viasoft.CopyPlaceHolders"
-            description="Copia o sql substituindo as variaveis pelos placeholder"
+            description="Copy text by replacing variables with placeholders"
             popup="true"
             text="Copy Place Holders"
             id="viasoft-placeHolders-action">
